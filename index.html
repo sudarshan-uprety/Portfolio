@@ -11,7 +11,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -522,7 +522,7 @@
                       </h5>
                     </div>
                     <div>
-                      <form onsubmit="sendEmail(); reset(); return false;" >
+                      <form onsubmit="sendEmail(); reset(); return false">
                         <div class="row">
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
@@ -532,6 +532,11 @@
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
                               <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone Number" required>
                             </div>
                           </div>
                           <div class="col-md-12 mb-3">
@@ -619,20 +624,19 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function sendEmail(){
-      Email.send({
-      SecureToken : "9dbd0d77-f464-41e4-b7af-a4a6cd88a8a0",
-      //Password : "065B121470C2C066F99ED1552EF7BA70C67E",
-      To : 'sec.sudarshanuprety@gmail.com',
-      From : document.getElementById("email").value,
-      Subject : "New Contact Form Enquirey",
-      Body : "Idk man"
-       }).then(
-       message => alert("Message Sent Successfully bitch")
-);
-    }
-  </script>
+<script>
+        function sendEmail(){
+          Email.send({
+              SecureToken : "e849e81a-0276-4944-8c9b-379171bb0519",
+              To : 'sec.sudarshanuprety@gmail.com',
+              From : "mr.sudarshanuprety@gmail.com",
+              Subject : "dfgre",
+              Body : "ewrge"
+          }).then(
+            message => alert(message)
+          );
+              }
+</script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
