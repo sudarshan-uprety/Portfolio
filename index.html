@@ -546,7 +546,7 @@
                           </div>
                           <div class="col-md-12">
                             <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                              <textarea class="form-control" name="message" rows="5" id="message" placeholder="Message" required></textarea>
                             </div>
                           </div>
                           <div class="col-md-12 text-center my-3">
@@ -630,8 +630,12 @@
               SecureToken : "e849e81a-0276-4944-8c9b-379171bb0519",
               To : 'sec.sudarshanuprety@gmail.com',
               From : "mr.sudarshanuprety@gmail.com",
-              Subject : "dfgre",
-              Body : "ewrge"
+              Subject :document.getElementById("subject").value ,
+              Body :"Name: "+document.getElementById("name").value +"\n" + 
+                    "Email: " + document.getElementById("email").value +"\n"+ 
+                    "Phone: " + document.getElementById("phone").value +"\n"+ 
+                    "Subject: " + document.getElementById("subject").value +"\n"+ 
+                    "Message: " + document.getElementById("message").value
           }).then(
             message => alert(message)
           );
